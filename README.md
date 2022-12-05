@@ -15,6 +15,7 @@
 well，app builded with flutter, so it canbe cross-platform transfered quickly and easily.
 - config server address, /PROJECT/app/assets/configs/*.yaml (depths your environment, notices all yaml will be parsed，but more priority file will override lower file, release > profile > debug > default)
 
+- if you want register new account, run add-cdkey task in vscode to get some new cdkeys.
 enjoy it!!!
 
 
