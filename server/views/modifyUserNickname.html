@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rustling server</title>
+</head>
+<body>
+  <label> Modify User Nickname </label>
+  <form action="/modifyUserNickname" method="post">
+    <p>
+      <label>Username:
+        <input type="text" name="username" value="test" />
+      </label>
+    </p>
+    <p>
+      <label>Nickname:
+        <input type="text" name="nickname" value="test" />
+      </label>
+    </p>
+    <p>
+      <button type="submit">Modify</button>
+    </p>
+  </form>
+</body>
+</html>

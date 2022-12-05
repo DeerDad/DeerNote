@@ -1,0 +1,30 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "test user",
+            "type": "shell",
+            "command": "cd server; ./node_modules/.bin/mocha test/user_test.js --exit"
+        },
+        {
+            "label": "add cdkey",
+            "type": "shell",
+            "command": "cd server; ./node_modules/.bin/mocha test/add_cdkey.js --exit"
+        },
+        {
+            "label": "translation",
+            "type": "shell",
+            "command": "cd app; sh ./scripts/generate_language_files.sh",
+            "windows": {
+                "command": "cd app; ./scripts/generate_language_files.cmd"
+            },
+        },
+        {
+            "label": "gen proto",
+            "type": "shell",
+            "command": "cd scripts; ./generate_proto_files.cmd",
+        }
+    ]
+}

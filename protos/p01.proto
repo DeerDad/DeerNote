@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package p01;
+
+message ModifyNicknameRequest
+{
+  string account = 1;
+  string nickname = 2;
+}
+
+message EmptyMessage
+{
+  int32 placeHolder = 1;
+}
+
+message RegisterRequest
+{
+  string account = 1;
+  string password = 2;
+  string cdkey = 3;
+}
+
+message LoginRequest 
+{
+  string account = 1;
+  string password = 2;
+}
+
+message LogoutRequest 
+{
+  string account = 1;
+}
+
+message GetUserFolderRequest
+{
+  string account = 1;
+}
+
+message UpdateUserFolderRequest
+{
+  UserFolder userFolder = 1;
+}
+
+message PageDetail
+{
+  string uuid = 1;
+  string account = 2;
+  string content = 3;
+}
+
+message UpdatePageRequest
+{
+  string account = 1;
+  repeated PageDetail pageDetails = 2;
+}
+
+message DeletePageRequest
+{
+  string account = 1;
+  repeated string pages = 2;
+}
+
+message GetUserPageRequest
+{
+  string account = 1;
+  string uuid = 2;
+}
+
+message UserProfile
+{
+  string account = 1;
+  string password = 2;
+  string nickname = 3;
+}
+
+message UserFolder
+{
+  string account = 1;
+  PageProfile rootPage = 2;
+}
+
+message PageProfile
+{
+  string uuid = 1;
+  string name = 2;
+  repeated PageProfile subPages = 3;
+  bool deleted = 4;
+}

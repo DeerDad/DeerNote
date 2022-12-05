@@ -1,0 +1,4 @@
+*/node_modules/*
+*.g.dart
+*.log
+app/lib/generated/

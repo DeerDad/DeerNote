@@ -1,0 +1,17 @@
+{
+    "db_config" : {
+      "db_url"    : "mongodb://127.0.0.1:27017/testdb",
+      "user": "admin",
+      "pass": "admin"
+    },
+  
+    "log_config" : {
+      "log_level" : "trace"
+    },
+
+    "network" : {
+      "http_port" : 4000,
+      "cros_ip" : "127.0.0.1",
+      "cros_port" : 8000
+    }
+  }
